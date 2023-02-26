@@ -1,0 +1,35 @@
+{% extends "learning_logs/base.html" %}
+
+{% block page_header %}
+  <div class="jumbotron">
+      <h1 class="display-3">Track your learning.</h1>
+
+      <p class="lead">Make your own learning log, and keep a list of the topics you're
+      learning about. Whenever you learn something new about a topic, make an entry summarizing
+      what you've learned.</p>
+
+      {% if user.is_authenticated %}
+        <p class="lead">Hello, {{user.username}}</p>
+      {% else %}
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+           role="button">Register &raquo;</a>
+      {% endif %}
+  </div>
+  <div class="jumbotron">
+      <h1 class="display-3">Special thanks:</h1>
+
+      <ul>
+          <li>
+              <p class="lead">Gii Khristina</p>
+          </li>
+          <li>
+              <p class="lead">Denis Barbuk</p>
+          </li>
+          <li>
+              <p class="'lead">Vitaliy Pisnui</p>
+          </li>
+
+      </ul>
+  </div>
+{% endblock page_header %}
+
