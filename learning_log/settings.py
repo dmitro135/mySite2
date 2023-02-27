@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4)yshq57o44b1b$1#m_xd#61+n(ir=r6@bpm8l(rak!+#0^r9t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dima111.pythonanywhere.com']
 
 
 # Application definition
@@ -125,6 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+STATIC_ROOT = '/home/dima111/learning_log/static'
+MEDIA_ROOT = '/home/dima111/learning_log/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -133,6 +136,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'users:login'
 
-# Heroku settings
-import django_heroku
-django_heroku.settings(locals())
